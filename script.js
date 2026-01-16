@@ -32,7 +32,7 @@ document.getElementById('upload').addEventListener('click', () => {
       gapi.auth2.getAuthInstance().signIn().then(() => {
         var fileMetadata = { 
           name: fileName,
-          parents: ["https://drive.google.com/drive/folders/1mdg3uA8NFs8c8yx-KqGLaVD245B28Tu0"] // ganti dengan ID folder Drive tujuan
+          parents: ["1mdg3uA8NFs8c8yx-KqGLaVD245B28Tu0] // ganti dengan ID folder Drive tujuan
         };
         var media = { mimeType: "image/png", body: blob };
         gapi.client.drive.files.create({
