@@ -27,6 +27,9 @@ document.getElementById('upload').addEventListener('click', () => {
   gapi.load("client:auth2", function() {
     gapi.auth2.init({
       client_id: "928691431108-6bkm4ml6d0jric5nk2ppkf98e091v7kp.apps.googleusercontent.com" // ganti dengan Client ID Anda
+  scope: "https://www.googleapis.com/auth/drive.file"
+});
+
     });
     gapi.client.load("drive", "v3", function() {
       gapi.auth2.getAuthInstance().signIn().then(() => {
